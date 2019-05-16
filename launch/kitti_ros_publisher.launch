@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<launch>
+    <node pkg="kitti_ros_publisher" name="kitti_publisher" type="kitti_ros_publisher" output="screen">
+        <param name="vld_data_path" value="/home/chenhao/Datas/2011_09_30_drive_0020_sync/velodyne_points/data" />
+        <param name="points_pub_hz" type="int" value="10" />
+        <remap from="kitti_points" to="velodyne_points" />
+    </node>
+</launch>
